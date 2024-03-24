@@ -1,8 +1,33 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function reverseString(word) {
+  // create an array from the input string
+  const wordArray = word.split("");
+  console.log("wordArray ", wordArray);
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  console.log("reversedWordArray ", reversedWordArray);
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  console.log("reversedWord ", reversedWord);
+  // return the reversed string
+  return reversedWord;
 }
 
-/* 
+function isPalindrome(word) {
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  console.log(reversedWord, "___");
+  // if the reversed string is the same as the input
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isPalindrome("racecar"));
+
+
+/*
   Add your pseudocode here
 */
 
